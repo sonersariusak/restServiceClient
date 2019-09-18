@@ -11,7 +11,7 @@ public class Order{
 	private float orderAmount;
 
 	public int getOrderNumber() {
-		return orderNumber;
+		return this.orderNumber;
 	}
 
 	public void setOrderNumber(int orderNumber) {
@@ -19,7 +19,7 @@ public class Order{
 	}
 
 	public String getOrderName() {
-		return orderName;
+		return this.orderName;
 	}
 
 	public void setOrderName(String orderName) {
@@ -27,7 +27,7 @@ public class Order{
 	}
 
 	public String getOrderBuyer() {
-		return orderBuyer;
+		return this.orderBuyer;
 	}
 
 	public void setOrderBuyer(String orderBuyer) {
@@ -36,7 +36,7 @@ public class Order{
 
 
 	public float getOrderAmount() {
-		return orderAmount;
+		return this.orderAmount;
 	}
 
 	public void setOrderAmount(float orderAmount) {
