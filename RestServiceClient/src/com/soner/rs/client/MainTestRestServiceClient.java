@@ -11,10 +11,11 @@ public class MainTestRestServiceClient {
 
 	public static void main(String[] args) {
 		post();
-		System.out.println("This is \"Delete\" process..");
 		delete();
-		System.out.println("This is \"Get\" process..");
-		get();
+//		System.out.println("This is \"Delete\" process..");
+//		delete();
+//		System.out.println("This is \"Get\" process..");
+//		get();
 	}
 
 	private static void get() {

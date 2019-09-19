@@ -27,12 +27,6 @@ public class RestServiceOrder {
 	@Produces({ MediaType.APPLICATION_XML })
 	public List<Order> getOrder() throws Exception {
 		
-		Order o =new Order();
-		o.setOrderNumber(3);
-		o.setOrderAmount(55);
-		o.setOrderBuyer("Bahar");
-		o.setOrderName("Computer");
-		orders.add(o);
 		return orders;
 	}
 
