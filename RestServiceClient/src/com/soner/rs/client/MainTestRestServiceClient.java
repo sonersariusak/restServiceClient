@@ -10,12 +10,11 @@ import com.sun.jersey.api.client.WebResource;
 public class MainTestRestServiceClient {
 
 	public static void main(String[] args) {
-		post();
-		delete();
-//		System.out.println("This is \"Delete\" process..");
-//		delete();
-//		System.out.println("This is \"Get\" process..");
-//		get();
+		
+//		System.out.println("This is \"Post\" process..");
+//		post();
+		System.out.println("This is \"Get\" process..");
+		get();
 	}
 
 	private static void get() {
@@ -30,9 +29,9 @@ public class MainTestRestServiceClient {
 	private static void post() {
 
 		Order order = new Order();
-		order.setOrderName("TV");
-		order.setOrderAmount(50);
-		order.setOrderBuyer("Uğur");
+		order.setOrderName("Bilgisayar");
+		order.setOrderAmount(100);
+		order.setOrderBuyer("Soner");
 		order.setOrderNumber(2);
 
 		try {
@@ -44,25 +43,6 @@ public class MainTestRestServiceClient {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
-
-	}
-
-	private static void delete() {
-
-		Order order = new Order();
-		order.setOrderName("TV");
-		order.setOrderAmount(50);
-		order.setOrderBuyer("Uğur");
-		order.setOrderNumber(2);
-
-		Client client = Client.create();
-		WebResource resource = client.resource("http://localhost:8080/RestService/rest/orders/delete");
-
-		ClientResponse response = resource.accept(MediaType.APPLICATION_XML).delete(ClientResponse.class, order);
-
-		if (response.getStatus() == 200) {
-			System.out.println(response.getEntity(String.class));
 		}
 
 	}
